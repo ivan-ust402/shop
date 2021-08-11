@@ -1,5 +1,5 @@
 .nav-wrapper {
-    padding: 0 2rem;
+    padding: 0 2rem; /*свеху и снизу 0, слева и справа 2rem (rem - единицы относительно шрифта <html>)*/
     background-color: #90b307;
 }
 

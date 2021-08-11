@@ -1,9 +1,11 @@
+  {{!Подключаем навигациют}}
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Приложение курсов</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-        {{#if isHome}}
+        {{!делаем активную подсветку выбранного пункта в зависимости от условия}} 
+        {{#if isHome}} 
           <li class="active"><a href="/">Главная</a></li>
         {{else}}
           <li><a href="/">Главная</a></li>

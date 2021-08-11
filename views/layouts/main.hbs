@@ -1,8 +1,9 @@
-{{> head }}
+{{!главный layout (макет)}}
+{{> head }} {{!  > - обозначает что мы используем partial head }}
 <body>
-    {{> navbar}}
+    {{> navbar}} {{!Подключаем паршиал навигации}}
     
-    <div class="container">
+    <div class="container"> {{!Оборачиваем каждую страницу в класс контейнер}}
     {{{ body }}}
     </div>
 
