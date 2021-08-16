@@ -1,4 +1,5 @@
-const {Router} = require('express')
+//const express.Router = require('express') либо
+const {Router} = require('express') //подключаем Router
 const router = Router()
 
 router.get('/', (req, res) => {
@@ -8,4 +9,4 @@ router.get('/', (req, res) => {
     })
 })
 
-module.exports = router
+module.exports = router //экспортируем наружу объект роутер

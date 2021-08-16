@@ -3,6 +3,8 @@ const express = require('express')
 //Для работы с путями в ОС
 const path = require('path')
 const exphbs = require('express-handlebars') //подключаем пакет hbrs
+
+//импортируем все роуты в файл index.js
 const homeRoutes = require('./routes/home')
 const cardRoutes = require('./routes/card')
 const coursesRoutes = require('./routes/courses')
@@ -24,11 +26,12 @@ app.set('view engine', 'hbs') //с помощью метода set мы начи
 app.set('views', 'views') //название переменной views- ее мы конфигурируем, второй параметр название папки где хранятся шаблоны, по умолчанию это папка view, но здесь мы явно ее укажем
 
 app.use(express.static(path.join(__dirname, 'public'))) //делаем папку public статической для того, чтобы когда экспресс будет подгружать файлы с адресом /, он смотрел не только корневые файлы но и заглядывал в статическую папку public
-app.use(express.urlencoded({extended: true}))
+
+app.use(express.urlencoded({extended: true})) //???для обработки пост запроса необходимо воспользоваться данным методом, вместо прослушки события
 
 
-//Добавляем роуты (маршруты) всех страниц
-app.use('/', homeRoutes) 
+//Добавляем роуты (маршруты) всех страниц, с помощью use используем подключенные роуты из папки /routes
+app.use('/', homeRoutes) //первым параметром передаем префикс пути в строковом значении,
 app.use('/courses', coursesRoutes)
 app.use('/add', addRoutes)
 app.use('/card', cardRoutes)
