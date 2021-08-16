@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 //Обрабатываем POST запрос, отвечающий за обработку формы
 router.post('/', async (req, res) => {
-    const course = new Course(req.body.title, req.body.price, req.body.img)
+    const course = new Course(req.body.title, req.body.price, req.body.img) //создали переменную course через конструктор Course
 
     await course.save()
 

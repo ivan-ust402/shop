@@ -3,10 +3,12 @@
     background-color: #90b307;
 }
 
+/*Стилизуем цену*/
 .price {
    font-size: 2rem; 
 }
 
+/*Стилизуем страницу каждого курса*/
 .course{
     width: 100%;
     display: flex;
@@ -15,7 +17,7 @@
 }
 
 .course h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Отступ между заголовком и остальным контентом*/
 }
 
 .course img {
@@ -27,6 +29,7 @@
     font-size: 2.5rem;
 }
 
+/*Форматирование кнопки добавить курс*/
 .card-action.actions {
     display: flex;
     align-items: center;

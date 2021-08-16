@@ -14,7 +14,9 @@
         </div>
         <div class="card-action actions">
           <a href="/courses/{{id}}" target="_blank">Открыть курс</a>
+          <!--Обрабатываем query параметр, обработка query параметра allow записывается следующим образом /edit?allow=true-->
           <a href="/courses/{{id}}/edit?allow=true">Редактировать</a>
+          <!--кнопка добавления курса-->
           <form action="/card/add" method="POST">
             <input type="hidden" name="id" value="{{id}}">
             <button type="submit" class="btn btn-primary">Купить</button>

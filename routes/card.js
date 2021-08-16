@@ -9,6 +9,7 @@ router.post('/add', async (req, res) => {
     res.redirect('/card')
 })
 
+//КНопка удалить из корзины
 router.delete('/remove/:id', async (req, res) => {
     const card = await Card.remove(req.params.id)
     res.status(200).json(card)
